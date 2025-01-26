@@ -1,1 +1,1 @@
-git@github.com:abakaeva0444/zakrivayuschiy-teg-f.git
+https://github.com/abakaeva0444/zakrivayuschiy-teg-f.git
