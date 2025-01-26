@@ -72,9 +72,6 @@
   display: inline-block;
 }
 
-.article {
-}
-
 .card-image {
   display: block;
   object-fit: cover;
@@ -183,9 +180,6 @@
   transition: border-color 0.3s ease;
   appearance: none;
   padding: 9px 35px 9px 35px;
-}
-
-.span__button {
 }
 
 .footer {
