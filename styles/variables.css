@@ -1,1 +1,25 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --main-font: 'Inter', sans-serif; /* Основной шрифт (Inter) */
+    --header-font: "PressStart2P", cursive;  /* Акцентный шрифт (Press Start 2P) */
+    --page-background-image: url(../images/background.png); /* основной фон макета */
+    --header-background-color: rgba(255, 255, 255, 1); /* фон блока header */
+    --main-cards-list__item: rgba(255, 255, 255, 1); /* фон карточек main */
+    --color-text: rgba(0, 0, 0, 1); /*цвет текста*/
+    --text-shadowrgba-label: rgba(255, 255, 255, 1); /* цвет для лейбла */
+    --save-button-background-color: rgba(255, 255, 255, 1);
+    --button-color-text: rgba(255, 255, 255, 1);
+    --contour-color-icon: rgba(0, 0, 0, 1);
+    --main-body-color-icon: rgba(255, 255, 255, 1);
+    --sparks-color-icon: rgba(255, 0, 0, 1);
+
+
+    --page-background-image-fon: repeating-linear-gradient(
+      to left,
+      #d3d3d3 0 2px,
+      #d3d3d300 2px 4px
+    ),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+
+  }
