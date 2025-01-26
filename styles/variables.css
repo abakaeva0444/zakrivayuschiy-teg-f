@@ -9,7 +9,7 @@
     --text-shadowrgba-label: rgba(255, 255, 255, 1); /* цвет для лейбла */
     --save-button-background-color: rgba(255, 255, 255, 1);
     --button-color-text: rgba(255, 255, 255, 1);
-    --contour-color-icon: rgba(0, 0, 0, 1);
+    --contour-color-icon: rgba(0, 0, 0, 1); /* сердце*/
     --main-body-color-icon: rgba(255, 255, 255, 1);
     --sparks-color-icon: rgba(255, 0, 0, 1);
 
