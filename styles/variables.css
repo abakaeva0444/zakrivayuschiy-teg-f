@@ -5,7 +5,7 @@
     --page-background-image: url(../images/background.png); /* основной фон макета */
     --header-background-color: rgba(255, 255, 255, 1); /* фон блока header */
     --main-cards-list__item: rgba(255, 255, 255, 1); /* фон карточек main */
-    --color-text: rgba(0, 0, 0, 1); /*цвет текста*/
+    --color-text: rgba(0, 0, 0, 1), ; /*цвет текста*/
     --text-shadowrgba-label: rgba(255, 255, 255, 1); /* цвет для лейбла */
     --save-button-background-color: rgba(255, 255, 255, 1);
     --button-color-text: rgba(255, 255, 255, 1);
