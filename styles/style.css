@@ -16,7 +16,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  font-variation-settings: "wght" var(--main-font, 400);
+  font-variation-settings: "wght" var(--page-font-weight);
   font-family: var(--main-font);
   min-block-size: 100dvb;
   max-inline-size: 696px;
@@ -43,17 +43,17 @@
 
 .header-subtitle {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  margin-block-start: 24px;
-  margin-block-end: 120px;
+  padding-block-start: 21px;
+  padding-block-end: 123px;
 }
 
 .main {
-  margin-block-start: 103px;
+  margin-block-start: 97px;
 }
 
 .card-list {
   display: grid;
-  gap: 52px;
+  gap: 48px;
 }
 
 .cards-list__item {
@@ -63,13 +63,12 @@
 
 .card-title {
   font-size: clamp(1.125rem, 1.081rem + 0.1878vw, 1.25rem);
-  margin-inline-start: 9px;
-  margin-inline-end: 5px;
+  font-variation-settings: "wght" var(--main-font-weight);
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+  padding-block-end: 5px;
+  padding-block-start: 5px;
   border-bottom: 2px solid;
-}
-
-.article {
-  margin-block-start: 6px;
 }
 
 .image-wrapper {
@@ -92,17 +91,17 @@
   top: 0;
   right: 0;
   mix-blend-mode: hard-light;
-  padding: 25px 13px;
+  padding-block-start: 20px;
+  padding-inline-end: 13px;
   text-shadow: 1px 1px 1px var(--text-shadowrgba-label, #fff);
-  -webkit-text-stroke: 1px var(--text-shadowrgba-label, #fff);
-  text-stroke: 1px var(--color-text, #000);
 }
 
-@supports (text-stroke: 1px var(--color-text)) {
+@supports (text-stroke: 1px var(--color-text, #000)) or
+  (-webkit-text-stroke: 1px var(--text-shadowrgba-label, #fff)) {
   .image-label {
-    --text-stroke: 1px var(--text-shadowrgba-label, #fff);
-    text-stroke: var(--text-stroke);
-    -webkit-text-stroke: var(--text-stroke);
+    -webkit-text-stroke: 1px var(--text-shadowrgba-label, #fff);
+    text-stroke: 1px var(--color-text, #000);
+    text-shadow: none;
   }
 }
 
@@ -111,7 +110,7 @@
   border-top: 2px solid;
   display: grid;
   gap: 27px;
-  padding: 30px 30px 0 25px;
+  padding: 25px 30px 1px 25px;
   line-height: 21px;
 }
 
@@ -155,7 +154,7 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--color-text, #000);
+  box-shadow: 2px 2px 0px 0px #000;
 }
 
 .button::before {
@@ -190,10 +189,10 @@
 
 .save-button {
   display: grid;
+  justify-self: center;
   gap: 15px;
-  margin-block-start: 49px;
-  margin-inline-start: 32px;
-  padding: 0px 20px 15px 22px;
+  margin-block-start: 47px;
+  padding: 0px 22px 16px 22px;
   margin-block-end: 80px;
 }
 
@@ -223,17 +222,18 @@
 .modal__content {
   display: flex;
   align-items: center;
-  gap: 55px;
-  margin-block-start: 10px;
+  gap: 16px;
 }
 
 .modal {
   font-family: var(--header-font);
-  min-width: 341px;
-  min-height: 191px;
   text-transform: uppercase;
   line-height: 1.5;
-  margin-block-end: 216px;
+  border: 2px solid var(--color-text, #000);
+  padding: 25px 30px;
+  color: var(--text-color, #000000);
+  background: var(--header-background-color);
+  max-inline-size: 355px;
 }
 
 .modal[open] {
@@ -241,21 +241,28 @@
 }
 
 .modal__icon {
-  inline-size: 39px;
   block-size: 39px;
+  flex-shrink: 0;
+  inline-size: 39px;
 }
 
 .modal__button {
   inline-size: 100%;
   padding: 0.6rem 1.1rem 0.6rem 1.1rem;
-  margin-block-start: 20px;
+  margin-block-start: 30px;
 }
 
 .modal::backdrop {
   opacity: 75%;
-  background: var(--color-text, #000);
+  background-color: #000;
 }
 
+@media (width < 376px) {
+  .modal {
+    padding: 28px 30px 28px 30px;
+    max-inline-size: 340px;
+  }
+}
 .image-blur {
   filter: blur(3px);
 }
@@ -292,11 +299,11 @@
 
 @media (min-width: 1440px) {
   .header-logo {
-    margin-block-start: 124px;
+    margin-block-start: 129px;
   }
 
   .main {
-    margin-block-start: 111px;
+    margin-block-start: 104px;
   }
 
   .card-title {
@@ -305,11 +312,12 @@
 
   .card__content {
     font-size: 18px;
-    padding: 34px 19px 2px 24px;
+    padding: 30px 24px 0px 24px;
   }
 
-  .article {
-    margin-block-start: 0px;
+  .image-label {
+    padding-inline-end: 26px;
+    padding-block-start: 24px;
   }
 
   .button__text {
@@ -323,20 +331,14 @@
   .save-button {
     display: flex;
     align-items: center;
-    margin-inline-start: 180px;
     padding: 16px 19px 15px 13px;
-    margin-block-start: 47px;
+    gap: 8px;
   }
 
   .button__icon {
-    block-size: 21px;
-    inline-size: 21px;
+    block-size: 23px;
+    inline-size: 24px;
     margin-block-start: 0px;
     margin-block-end: 0px;
-  }
-
-  .modal {
-    max-inline-size: 355px;
-    margin-block-start: 130px;
   }
 }
