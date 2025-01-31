@@ -19,8 +19,9 @@
   font-variation-settings: "wght" var(--page-font-weight);
   font-family: var(--main-font);
   min-block-size: 100dvb;
-  max-inline-size: 696px;
+  max-inline-size: 700px;
   margin-inline: auto;
+  padding-block-start: 100px;
 }
 
 .header {
@@ -32,7 +33,6 @@
   display: grid;
   justify-items: center;
   justify-content: center;
-  margin-block-start: 99px;
 }
 
 .header-logo {
@@ -43,12 +43,14 @@
 
 .header-subtitle {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  padding-block-start: 21px;
-  padding-block-end: 123px;
+  padding-block-start: 20px;
+  padding-block-end: 120px;
 }
 
 .main {
-  margin-block-start: 97px;
+  display: grid;
+  justify-items: center;
+  margin-block-start: 100px;
 }
 
 .card-list {
@@ -62,7 +64,7 @@
 }
 
 .card-title {
-  font-size: clamp(1.125rem, 1.081rem + 0.1878vw, 1.25rem);
+  font-size: 18px;
   font-variation-settings: "wght" var(--main-font-weight);
   padding-inline-start: 10px;
   padding-inline-end: 10px;
@@ -106,11 +108,11 @@
 }
 
 .card__content {
-  font-size: clamp(1.125rem, 1.081rem + 0.1878vw, 1.25rem);
+  font-size: 18px;
   border-top: 2px solid;
   display: grid;
   gap: 27px;
-  padding: 25px 30px 1px 25px;
+  padding: 25px 28px 1px 24px;
   line-height: 21px;
 }
 
@@ -147,6 +149,7 @@
   appearance: none;
   border: 2px solid var(--color-text, #000);
   overflow: hidden;
+  font-size: 14px;
 }
 
 .button:focus {
@@ -175,14 +178,15 @@
 .card__like-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: border-color 0.3s ease;
   appearance: none;
   padding: 9px 35px 12px 35px;
+  width: 130px;
 }
 
 .button__text {
-  font-size: clamp(0.875rem, 0.787rem + 0.3756vw, 1.125rem);
   mix-blend-mode: difference;
   color: var(--button-color-text, #fff);
 }
@@ -193,7 +197,6 @@
   gap: 15px;
   margin-block-start: 47px;
   padding: 0px 22px 16px 22px;
-  margin-block-end: 80px;
 }
 
 .button__icon {
@@ -222,7 +225,7 @@
 .modal__content {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .modal {
@@ -234,10 +237,12 @@
   color: var(--text-color, #000000);
   background: var(--header-background-color);
   max-inline-size: 355px;
+  font-size: 14px;
 }
 
 .modal[open] {
-  display: block;
+  display: grid;
+  gap: 30px;
 }
 
 .modal__icon {
@@ -248,8 +253,7 @@
 
 .modal__button {
   inline-size: 100%;
-  padding: 0.6rem 1.1rem 0.6rem 1.1rem;
-  margin-block-start: 30px;
+  padding: 9px 17px 9px 17px;
 }
 
 .modal::backdrop {
@@ -259,8 +263,8 @@
 
 @media (width < 376px) {
   .modal {
-    padding: 28px 30px 28px 30px;
-    max-inline-size: 340px;
+    padding: 28px 41px;
+    max-inline-size: 341px;
   }
 }
 .image-blur {
@@ -302,26 +306,25 @@
     margin-block-start: 129px;
   }
 
-  .main {
-    margin-block-start: 104px;
+  .header-subtitle {
+    padding-block-end: 125px;
   }
 
-  .card-title {
-    font-size: 18px;
+  .main {
+    margin-block-start: 102px;
+  }
+
+  .card-list {
+    gap: 47px;
   }
 
   .card__content {
-    font-size: 18px;
-    padding: 30px 24px 0px 24px;
+    padding: 27px 24px 0px 24px;
   }
 
   .image-label {
     padding-inline-end: 26px;
     padding-block-start: 24px;
-  }
-
-  .button__text {
-    font-size: 14px;
   }
 
   .card__like-button {
@@ -331,7 +334,7 @@
   .save-button {
     display: flex;
     align-items: center;
-    padding: 16px 19px 15px 13px;
+    padding: 17px 21px 15px 21px;
     gap: 8px;
   }
 
